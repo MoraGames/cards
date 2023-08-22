@@ -14,7 +14,7 @@ type FrenchDeck struct {
 	cards []cards.Card
 }
 
-func DefaultFranchDeck() *FrenchDeck {
+func DefaultFrenchDeck() *FrenchDeck {
 	var frenchDeck FrenchDeck
 	for i := 0; i < 52; i++ {
 
@@ -44,11 +44,11 @@ func DefaultFranchDeck() *FrenchDeck {
 			cardValue = " K"
 		}
 
-		frenchDeck.cards[i] = &FrenchCard{
+		frenchDeck.cards = append(frenchDeck.cards, &FrenchCard{
 			suit:      cardSuit,
 			value:     cardValue,
 			isCovered: true,
-		}
+		})
 	}
 	return &frenchDeck
 }
