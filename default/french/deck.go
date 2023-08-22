@@ -115,3 +115,7 @@ func (d *FrenchDeck) IsCovered() bool {
 func (d *FrenchDeck) String() string {
 	return d.cards[0].String()
 }
+
+func (d *FrenchDeck) Size() int {
+	return d.size
+}

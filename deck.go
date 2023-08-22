@@ -8,4 +8,5 @@ type Deck interface {
 	Flip() error
 	IsCovered() bool
 	String() string
+	Size() int
 }
