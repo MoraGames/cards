@@ -16,7 +16,9 @@ type FrenchDeck struct {
 
 func DefaultFrenchDeck() *FrenchDeck {
 	var frenchDeck FrenchDeck
-	for i := 0; i < 52; i++ {
+
+	frenchDeck.size = 52
+	for i := 0; i < frenchDeck.size; i++ {
 
 		var cardSuit, cardValue string
 		switch i / 13 {
